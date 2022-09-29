@@ -1,0 +1,2 @@
+## CORE
+Core Malla Application
