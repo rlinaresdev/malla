@@ -16,7 +16,7 @@ use Illuminate\Support\ServiceProvider;
 class CoreAccessor extends ServiceProvider {
 
    public function boot( Kernel $HTTP, Translator $LANG ) {
-      if( $this->app["core"]->isRunning() ) {
+      if( $this->app["malla"]->isRunning() ) {
          $this->load($HTTP, $LANG);
       }
    }
@@ -26,7 +26,6 @@ class CoreAccessor extends ServiceProvider {
    }
 
    public function getGrammars( $locale="es" ) {
-
       if( $this->app["files"]->exists(__VENDORPATH__."App/Http/Langs/$locale.php") ) {
          return $this->app["files"]->getRequire(__VENDORPATH__."App/Http/Langs/$locale.php");
       }

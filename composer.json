@@ -15,8 +15,9 @@
     },
     "autoload": {
         "psr-4": {
-            "Malla\\": "src/System/",
-            "Malla\\Http\\": "src/Http/"
+            "Malla\\": "System/",
+            "Malla\\Admin\\": "Admin/System",
+            "Malla\\Admin\\Http\\": "Admin/Http"            
         }
     },
     "config": {

@@ -12,7 +12,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class CoreConfig extends Model {
 
-  protected $table = "apps_config";
+  protected $table = "appsconfig";
 
   protected $fillable = [
       "core_id",

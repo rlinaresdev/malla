@@ -10,14 +10,14 @@
 ## PATH
 if( !function_exists("__path") ) {
    function __path($key=null) {
-      return core("urls")->path($key);
+      return malla("urls")->path($key);
    }
 }
 
 ## URLS
 if( !function_exists("__url") ) {
    function __url($uri=null, $parameters=[], $secure=null ) {
-      return core("urls")->url($uri, $parameters, $secure);
+      return malla("urls")->url($uri, $parameters, $secure);
    }
 }
 

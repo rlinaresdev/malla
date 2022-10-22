@@ -23,7 +23,7 @@ class Loader {
 	}
 
    public function DB() {
-      return self::$app["core"]->load("coredb");
+      return self::$app["malla"]->load("coredb");
    }
 
    /*
@@ -47,7 +47,7 @@ class Loader {
    * PROXY */
    public function httpProxy() {
 
-      $DB = self::$app["core"]->load("coredb");
+      $DB = self::$app["malla"]->load("coredb");
 
       $modules   = config("app.modules");
       $modules   = array_keys(config("app.modules"));

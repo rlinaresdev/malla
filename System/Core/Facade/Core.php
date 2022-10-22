@@ -10,5 +10,5 @@ namespace Malla\Core\Facade;
 use Illuminate\Support\Facades\Facade;
 
 class Core extends Facade {
-   public static function getFacadeAccessor(){return "Core";}
+   public static function getFacadeAccessor(){return "Malla";}
 }

@@ -12,18 +12,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class CoreInfo extends Model {
 
-  protected $table = "apps_info";
+  protected $table = "appsinfo";
 
   protected $fillable = [
-    "app_id",
-		"name",
-		"author",
-		"email",
-		"avatar",
-		"license",
-		"support",
-		"version",
-		"description",
-		"comment"
+   "name",
+   "author",
+   "email",
+   "avatar",
+   "license",
+   "support",
+   "version",
+   "description",
+   "comment",
+   "app_id",
   ];
 }

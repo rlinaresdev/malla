@@ -12,14 +12,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class CoreMeta extends Model {
 
-  protected $table = "apps_meta";
+  protected $table = "appsmeta";
 
   protected $fillable = [
-    "app_id",
-		"type",
-		"key",
-		"value",
-		"activated"
+   "app_id",
+   "type",
+   "key",
+   "value",
+   "activated"
   ];
 
   //public $timestamps = false;

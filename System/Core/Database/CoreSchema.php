@@ -15,10 +15,10 @@ class CoreSchema {
 
     protected $tables = [
       "apps",
-      "apps_info",
-      "apps_config",
-      "apps_meta",
-      "apps_locale",
+      "appsinfo",
+      "appsconfig",
+      "appsmeta",
+      "appslocale",
       "routes",
     ];
 
@@ -64,9 +64,9 @@ class CoreSchema {
       }
     }
 
-    public function apps_info() {
-      if( !Schema::hasTable("apps_info") ) {
-         Schema::create('apps_info', function ($table) {
+    public function appsinfo() {
+      if( !Schema::hasTable("appsinfo") ) {
+         Schema::create('appsinfo', function ($table) {
             $table->integer('app_id')->unsigned();
             $table->foreign('app_id')->references('id')->on('apps')->onDelete('CASCADE')->onUpdate('CASCADE');
 
@@ -87,9 +87,9 @@ class CoreSchema {
       }
     }
 
-    public function apps_config() {
-      if( !Schema::hasTable("apps_config") ) {
-         Schema::create('apps_config', function ($table) {
+    public function appsconfig() {
+      if( !Schema::hasTable("appsconfig") ) {
+         Schema::create('appsconfig', function ($table) {
 
             $table->bigIncrements('id');
 
@@ -105,9 +105,9 @@ class CoreSchema {
       }
     }
 
-    public function apps_locale() {
-      if( !Schema::hasTable("apps_locale") ){
-         Schema::create('apps_locale', function ($table) {
+    public function appslocale() {
+      if( !Schema::hasTable("appslocale") ){
+         Schema::create('appslocale', function ($table) {
             $table->bigIncrements('id');
 
             $table->integer('app_id')->unsigned();
@@ -123,9 +123,9 @@ class CoreSchema {
       }
     }
 
-    public function apps_meta() {
-      if( !Schema::hasTable("apps_meta") ) {
-         Schema::create('apps_meta', function ($table) {
+    public function appsmeta() {
+      if( !Schema::hasTable("appsmeta") ) {
+         Schema::create('appsmeta', function ($table) {
             $table->bigIncrements('id');
 
             $table->string("type", 30);
@@ -144,7 +144,6 @@ class CoreSchema {
     }
 
     public function up() {
-
       $notes = null;
       $ident = " -- ";
 
@@ -163,12 +162,10 @@ class CoreSchema {
     }
 
     public function down() {
-
       $notes = null;
       $ident = " -- ";
 
       if(Schema::hasTable("migrations")) {
-
   			if(\DB::table("migrations")->count() == 0) {
   				Schema::dropIfExists("migrations");
           $notes[] = $ident.__("core.migrate.reset");

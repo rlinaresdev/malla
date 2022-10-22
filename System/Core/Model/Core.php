@@ -145,7 +145,7 @@ class Core extends Model {
    }
 
    public function toggleCore($status) {
-      
+
       if( ($data = $this->type("core")->where("slug", "core"))->count() > 0 ) {
          $data = $data->first();
          $data->activated = 1;

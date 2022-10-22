@@ -12,13 +12,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class CoreLocale extends Model {
 
-  protected $table = "apps_locale";
+  protected $table = "appslocale";
 
   protected $fillable = [
-      "app_id",
-		"key",
-		"value",
-		"activated"
+   "app_id",
+   "key",
+   "value",
+   "activated"
   ];
 
   public $timestamps = false;
